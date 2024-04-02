@@ -300,7 +300,6 @@
       object-fit: cover; /* Cover the container without stretching */
       width: 90%;
       height: 350px;
-      /* Adjust the size as needed, or add a max-width for larger screens */
     }
 
     .about-image-wrapper {
@@ -398,6 +397,7 @@
     color: #454545; /* Text color */
     line-height: 1.6; /* Line height for readability */
     margin-bottom: 0;
+    margin-top: 25px;
   }
 
   .work-experience-section h3 {
