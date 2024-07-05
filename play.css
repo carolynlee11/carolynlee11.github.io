@@ -1,0 +1,74 @@
+/* General paragraph style */
+
+/* Project section styles */
+.project-section {
+    margin-bottom: 50px; /* Space between sections */
+}
+
+.project-section h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #454545;
+    margin-bottom: 20px;
+    padding-left: 60px;
+}
+
+.horizontal-images,
+.grid-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px;
+}
+
+.horizontal-images img,
+.grid-images img {
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.horizontal-images img:hover,
+.grid-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Set width to 25% for horizontal images to align in a single row */
+.horizontal-images img {
+    width: calc(25% - 20px);
+}
+
+/* Set width to 50% for grid images to align in a 2x2 grid */
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-images img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .horizontal-images img,
+    .grid-images img {
+        width: calc(50% - 10px);
+    }
+
+    .grid-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .horizontal-images img,
+    .grid-images img {
+        width: 100%;
+    }
+
+    .grid-images {
+        grid-template-columns: 1fr;
+    }
+}
