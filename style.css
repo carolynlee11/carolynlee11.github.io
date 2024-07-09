@@ -162,6 +162,7 @@ p {
     font-weight: 300;
     background: rgba(217, 217, 217, 0.05); /* #d9d9d9 with 5% opacity */
     backdrop-filter: blur(5px); /* Background blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
     height: 100px; /* Adjust as per your design */
     display: flex;
     justify-content: center;
