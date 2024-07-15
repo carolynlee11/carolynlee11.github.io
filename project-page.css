@@ -1,0 +1,102 @@
+/* Project Page Styles */
+
+/* General Styles */
+body {
+    font-family: "Space Grotesk", sans-serif;
+    color: #454545;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin: 0 0 1rem 0;
+}
+
+/* Header Section */
+.project-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFFEFB; /* Background color */
+}
+
+.project-header h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.project-header h2 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Project Details Section */
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.project-left,
+.project-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-left h3,
+.project-right h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.project-left p,
+.project-right p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Project Images Section */
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Project Summary Section */
+.project-summary {
+    padding: 50px 20px;
+}
+
+.project-summary h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.project-summary p,
+.project-summary ul {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.project-summary ul {
+    padding-left: 20px;
+}
+
+.project-summary li {
+    margin-bottom: 10px;
+}

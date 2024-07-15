@@ -579,10 +579,6 @@ html, body {
     transform: translateY(-10px); /* Lift the card slightly on hover */
 }
 
-.project-image-link {
-    display: block; /* Ensure the image link fills the container */
-}
-
 .project-image {
     width: 100%; /* Make the image fill the card width */
     height: 200px; /* Fixed height for the image */
