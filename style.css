@@ -383,7 +383,6 @@ html, body {
     grid-template-columns: 1fr 1fr; /* This creates two columns of equal width */
     column-gap: 2rem; /* This adds space between the columns */
     margin-top: 2rem; /* Add margin as needed */
-    padding-left: 55px;
     /* Add additional styling such as padding or background color as needed */
 }
 

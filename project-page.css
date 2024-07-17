@@ -9,33 +9,43 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, p {
-    margin: 0 0 1rem 0;
-}
 
 /* Header Section */
-.project-header {
-    text-align: center;
-    padding: 50px 20px;
+.general-section {
+    padding-top: 100px;
+    padding-bottom: 10px;
     background-color: #FFFEFB; /* Background color */
+    animation: fadeInUp 1s ease-in-out forwards; /* Fade-in and slide-up animation */
 }
 
-.project-header h1 {
-    font-size: 48px;
+.general-section h2 {
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 600;
+    font-size: 48px; /* Set the font size for the heading */
+    color: #454545; /* Set the color */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: left; /* Center the heading */
+    padding-left: 50px;
 }
 
-.project-header h2 {
-    font-size: 24px;
+.general-section h3 {
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
+    font-size: 20px; /* Set the font size for the heading */
+    color: #454545; /* Set the color */
+    text-align: left; /* Center the heading */
+    padding-left: 105px;
 }
+
 
 /* Project Details Section */
 .project-details {
     display: flex;
     justify-content: space-between;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #FFFEFB;
+    padding-left: 85px;
+    padding-right: 85px;
+
 }
 
 .project-left,
@@ -52,7 +62,7 @@ h1, h2, h3, p {
 
 .project-left p,
 .project-right p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -63,6 +73,8 @@ h1, h2, h3, p {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 50px 20px;
+    background-color: #FFFEFB;
+
 }
 
 .project-images img {
@@ -79,6 +91,8 @@ h1, h2, h3, p {
 /* Project Summary Section */
 .project-summary {
     padding: 50px 20px;
+    background-color: #FFFEFB;
+
 }
 
 .project-summary h3 {
