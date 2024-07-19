@@ -580,7 +580,7 @@ html, body {
 
 .project-image {
     width: 100%; /* Make the image fill the card width */
-    height: 200px; /* Fixed height for the image */
+    height: 100%; /* Fixed height for the image */
     object-fit: cover; /* Cover the container without stretching */
 }
 
