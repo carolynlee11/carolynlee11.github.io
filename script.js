@@ -4,8 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById("navbar-placeholder").innerHTML = data;
-        });
 
+            const menuIcon = document.getElementById("menu-icon");
+            const closeIcon = document.getElementById("close-icon");
+            const navMenu = document.getElementById("nav-menu");
+
+            menuIcon.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+
+            closeIcon.addEventListener("click", function() {
+                navMenu.classList.remove("active");
+            });
+        });
     const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let konamiIndex = 0;
 
