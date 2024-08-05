@@ -1,6 +1,5 @@
 /* Font importing */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
-
 @font-face {
     font-family: 'Hiragino';
     src: url('/fonts/Hiragino\ Maru\ Gothic\ ProN\ W4.otf') format('opentype');
@@ -8,6 +7,7 @@
     font-style: normal;
 }
 
+/* Animations and Transitions */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -85,18 +85,8 @@ p {
     animation: fadeInUp 1s ease-in-out forwards; /* Fade-in and slide-up animation */
 }
 
-@media (max-width: 768px) {
-    .text-container {
-        padding-left: 20px; /* Less padding for smaller screens */
-    }
-}
 
-/* Use another media query for mobile screens */
-@media (max-width: 480px) {
-    .text-container {
-        padding-left: 10px; /* Even less padding for mobile screens */
-    }
-}
+
 
 .main h1 {
     font-family: "Space Grotesk", sans-serif;
@@ -244,6 +234,53 @@ p {
     }
 }
 
+/* General mobile adjustments */
+@media screen and (max-width: 768px) {
+    .main {
+        padding-top: 0; /* Remove any padding from the top */
+    }
+    .text-container {
+        padding-top: 10px; /* Add some padding to push the text down slightly */
+        margin-top: -100px; /* Use a negative margin to move the text block up */
+    }
+    
+    .text-container h1 {
+        font-size: 36px; /* Adjust the size as needed for smaller screens */
+    }
+    
+    .text-container h2 {
+        font-size: 20px; /* Adjust the size as needed for smaller screens */
+    }
+    
+    .chinese {
+        font-size: 36px; /* Adjust the size for smaller screens */
+    }
+    
+    .pinyin {
+        font-size: 20px; /* Adjust the size for smaller screens */
+    }
+    
+    .underline {
+        height: 3px; /* Adjust the thickness of the underline on mobile */
+    }
+    
+    .text-container {
+        padding: 30px; /* Add some padding for better spacing on smaller screens */
+    }
+    
+    .divline {
+        bottom: 130px; /* Adjust position of the divider line */
+        width: 90%; /* Adjust the width on mobile */
+    }
+
+    .scroll-arrow {
+        width: 20px; /* Adjust the width for mobile */
+        bottom: 30px; /* Adjust the position */
+       
+    }
+}
+
+
 html, body {
     height: 100%;
     width: 100%;
@@ -303,13 +340,10 @@ html, body {
 }
 
 .scroll-arrow {
-    display: block;
     width: 30px;
     height: auto;
-    margin: 0 auto; /* This will center the arrow */
     position: absolute; /* To position it relative to .main */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset the translation by half the width of the image */
+    align-self: center;
     bottom: 50px; /* Distance from the bottom of the .main section */
     animation: fadeIn 1s ease-in-out forwards, upDown 1.5s infinite; /* Fade-in and continuous up-down animation */
 }
