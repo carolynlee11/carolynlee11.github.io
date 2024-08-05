@@ -631,3 +631,58 @@ html, body {
     padding-left: 60px;
     padding-right: 60px;
 }
+
+/*stars + konami*/
+/* style.css */
+@keyframes shootStar {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, 100vh) scale(0.1); /* Shrink the star to 10% of its original size */
+        opacity: 0;
+    }
+}
+
+.star {
+    position: fixed;
+    top: 0;
+    background-image: url('elements/star.svg');
+    background-size: cover;
+    z-index: 10000;
+    animation: shootStar 3s linear forwards;
+}
+
+
+
+.star {
+    position: fixed;
+    top: 0;
+    background-image: url('elements/star.svg');
+    background-size: cover;
+    z-index: 10000;
+    animation: shootStar 3s linear forwards;
+}
+
+
+
+.wish-text {
+    font-family: "Space Grotesk", sans-serif;
+    color: #454545; /* Set the color */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(29, 21, 21);
+    font-size: 2rem;
+    z-index: 10001;
+    animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
