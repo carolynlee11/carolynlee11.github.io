@@ -10,13 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
             const navMenu = document.getElementById("nav-menu");
 
             menuIcon.addEventListener("click", function() {
-                navMenu.classList.toggle("active");
+                navMenu.classList.remove("fade-out");
+                navMenu.classList.add("active");
             });
 
             closeIcon.addEventListener("click", function() {
-                navMenu.classList.remove("active");
+                navMenu.classList.add("fade-out");
+                
+                // Remove the active class after the fade-out animation completes
+                setTimeout(() => {
+                    navMenu.classList.remove("active");
+                }, 500); // Match the timeout to the fade-out animation duration
             });
         });
+
     const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let konamiIndex = 0;
 

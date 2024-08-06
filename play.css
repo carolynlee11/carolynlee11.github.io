@@ -50,17 +50,42 @@
 .grid-images img {
     width: 100%;
 }
-
 @media (max-width: 768px) {
+    .play-section {
+        padding: 20px 20px; /* Adjust padding as needed */
+    }
+
+    .play-section h2 {
+        font-size: 36px; /* Match with h1 size on mobile */
+        padding-left: 20px; /* Reduce left padding on mobile */
+    }
+
+    .headersub {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-section h3 {
+        font-size: 20px; /* Adjust font size for mobile */
+        padding-left: 20px; /* Adjust padding */
+    }
+
     .horizontal-images img,
     .grid-images img {
-        width: calc(50% - 10px);
+        width: 100%; /* Make images take full width */
+    }
+
+    .horizontal-images,
+    .grid-images {
+        padding-left: 20px; /* Adjust padding to align images properly */
+        padding-right: 20px;
     }
 
     .grid-images {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Change to a single column grid on mobile */
     }
 }
+
 
 @media (max-width: 480px) {
     .horizontal-images img,

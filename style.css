@@ -7,6 +7,7 @@
     font-style: normal;
 }
 
+
 /* Animations and Transitions */
 @keyframes fadeIn {
     0% {
@@ -14,6 +15,15 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -36,6 +46,19 @@
         transform: translateY(-10px);
     }
 }
+
+#works {
+    position: absolute;
+    bottom: 85px; /* Adjust this value as needed for desktop */
+}
+
+/* Mobile Styling */
+@media only screen and (max-width: 768px) {
+    #works {
+        bottom: -15px; /* Adjust this value as needed for mobile */
+    }
+}
+
 
 /* General paragraph style */
 p {
@@ -86,8 +109,6 @@ p {
 }
 
 
-
-
 .main h1 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600; /* If you want it bold */
@@ -133,6 +154,17 @@ p {
     width: 100%; /* Or the exact width of the underline you want */
     height: 4px; /* Or the exact thickness of the underline you want */
     background-color: #b7d6e6; /* The color of the underline */
+}
+
+.play-underline {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0px; /* Adjust this value to place the underline correctly */
+    left: 0;
+    width: 100%; /* Or the exact width of the underline you want */
+    height: 4px; /* Or the exact thickness of the underline you want */
+    background-color: #C9E3CD; /* The color of the underline */
 }
 
 .divline {
@@ -228,6 +260,18 @@ p {
 
 /* Mobile styles for Navbar*/
 @media screen and (max-width: 768px) {
+    .nav-logo {
+        color: #454545;
+        justify-self: start;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+    }
+
     .nav-menu {
         display: none;
         position: fixed;
@@ -244,6 +288,11 @@ p {
         box-shadow: none;
         padding-top: 70px;
         z-index: 999;
+        animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+    }
+
+    .nav-menu.fade-out {
+        animation: fadeOut 0.5s ease-in-out forwards;
     }
 
     .nav-close {
@@ -267,6 +316,21 @@ p {
         margin: 20px 0;
     }
 
+    .nav-div {
+        display: none; /* Hide dividers on mobile */
+    }
+
+    .linkedin-icon {
+        display: none; /* Hide LinkedIn icon on mobile */
+    }
+
+    .linkedin-link::after {
+        content: 'linkedin'; /* Add LinkedIn text on mobile */
+        font-size: 24px; /* Adjust size as needed */
+        color: #454545;
+        text-decoration: none;
+    }
+
     .menu-icon {
         display: block;
         cursor: pointer;
@@ -284,6 +348,7 @@ p {
     }
 }
 
+
 /* General mobile adjustments */
 @media screen and (max-width: 768px) {
     .main {
@@ -294,8 +359,8 @@ p {
         margin-top: -100px; /* Use a negative margin to move the text block up */
     }
     
-    .text-container h1 {
-        font-size: 36px; /* Adjust the size as needed for smaller screens */
+    .text-container h1, .work-section h2 {
+        font-size: 36px; /* Match the size of both h1 and work-section h2 */
     }
     
     .text-container h2 {
@@ -313,6 +378,10 @@ p {
     .underline {
         height: 3px; /* Adjust the thickness of the underline on mobile */
     }
+
+    .play-underline {
+        height: 3px; /* Adjust the thickness of the underline on mobile */
+    }
     
     .text-container {
         padding: 30px; /* Add some padding for better spacing on smaller screens */
@@ -326,9 +395,11 @@ p {
     .scroll-arrow {
         width: 20px; /* Adjust the width for mobile */
         bottom: 30px; /* Adjust the position */
-       
     }
+
+    
 }
+
 
 
 html, body {
@@ -389,14 +460,23 @@ html, body {
     height: 28px; /* Adjust size as needed */
 }
 
+
+.scroll-arrow-container {
+    position: absolute; /* Positioning relative to the parent container */
+    bottom: 50px; /* Distance from the bottom of the parent container */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust for the center alignment */
+}
+
 .scroll-arrow {
     width: 30px;
     height: auto;
-    position: absolute; /* To position it relative to .main */
-    align-self: center;
-    bottom: 50px; /* Distance from the bottom of the .main section */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the image within its container */
     animation: fadeIn 1s ease-in-out forwards, upDown 1.5s infinite; /* Fade-in and continuous up-down animation */
 }
+
+
 
 .page-text-container {
   max-width: 1200px; /* Max-width can be your Figma design's width or whatever suits your design */
@@ -446,21 +526,33 @@ html, body {
 }
 
 @media (max-width: 768px) {
+
+    .about-section {
+        padding: 85px 20px; /* Adjust padding as needed */
+    }
+
+    .about-section h2 {
+        padding-top: 20px;
+        font-size: 36px; /* Match with h1 size on mobile */
+        padding-left: 10px; /* Reduce left padding on mobile */
+    }
+
     .page-text-container {
-        padding-left: 20px; /* Less padding for smaller screens */
+        padding: 20px; /* Less padding for smaller screens */
     }
     .about-container {
         flex-direction: column; /* Stack elements vertically */
     }
     .about-text {
         max-width: 100%; /* Allow text to take full width on small screens */
-        order: 1; /* Ensure text is before the image on small screens */
+        order: 2; /* Ensure text is before the image on small screens */
     }
     .about-image-wrapper {
         max-width: 100%; /* Allow image to take full width on small screens */
-        order: 2; /* Ensure image is after the text on small screens */
+        order: 1; /* Ensure image is after the text on small screens */
     }
 }
+
 
 .additional-info-section {
     display: grid;
@@ -706,8 +798,59 @@ html, body {
 }
 
 @media (max-width: 768px) {
+
+    /* Adjust the work section on mobile */
+    .work-section {
+        padding: 20px 20px; /* Adjust padding as needed */
+    }
+
+    .work-section h2 {
+        padding-top: 20px;
+        font-size: 36px; /* Match with h1 size on mobile */
+        padding-left: 10px; /* Reduce left padding on mobile */
+    }
+
     .projects-container {
         grid-template-columns: 1fr;
+        gap: 15px; /* Space between project cards */
+        padding: 20px; /* Adjust padding on mobile */
+    }
+
+    .project-card {
+        height: 200px; /* Adjust height for mobile */
+    }
+
+    .project-info h3 {
+        font-size: 18px; /* Slightly smaller on mobile */
+    }
+
+    .project-info h4 {
+        font-size: 14px; /* Slightly smaller on mobile */
+    }
+
+    .tag {
+        font-size: 12px; /* Adjust tag size on mobile */
+    }
+
+    .headersub {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .headersub p {
+        font-size: 18px;
+    }
+
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .star-icon {
+        vertical-align: text-bottom; /* This aligns the star with the middle of the line of text */
+        margin-right: -5px; /* Adjust spacing between the star and the text */
+        width: 45px; /* Adjust size as needed */
+        height: 45px; /* Adjust size as needed */
     }
 }
 
