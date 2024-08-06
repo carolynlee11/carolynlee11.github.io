@@ -135,3 +135,66 @@ body {
 .project-summary li {
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .general-section h2 {
+        font-size: 32px;
+        padding-left: 20px;
+    }
+
+    .general-section h3 {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .project-details {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-left,
+    .project-right {
+        margin-bottom: 0px; /* Adjust this value to make the gap smaller */
+    }
+
+    .project-left h3,
+    .project-right h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .project-left p,
+    .project-right p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .pdf-embed {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-images {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-summary {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-summary h3 {
+        font-size: 20px;
+        padding-top: 0px;
+
+    }
+
+    .project-summary p,
+    .project-summary ul {
+        font-size: 16px;
+    }
+}
