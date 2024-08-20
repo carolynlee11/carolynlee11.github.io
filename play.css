@@ -97,3 +97,46 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Add this to your play.css or style.css file */
+.mementos-link {
+    background: linear-gradient(to right, #298DE9, #59C3FF, #298DE9, #0066CC); /* Gradient with distinct colors */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    animation: gradient-animation 3s ease-in-out infinite;
+    background-size: 300% 300%; /* Makes the gradient shift across the text */
+
+}
+
+.mementos-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background: #298DE9; /* Color of the underline */
+    transition: width 0.3s ease-out;
+}
+
+.mementos-link:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
