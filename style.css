@@ -179,6 +179,32 @@ p {
     animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
 }
 
+/* Typewriter Effect */
+
+/* Fade-in Animation for Work Section */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-section .project-container {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+.work-section .project-container.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to position */
+}
+
+
 .navbar {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
@@ -242,12 +268,32 @@ p {
     color: #454545;
     text-decoration: none;
     padding: 0.3rem 0.5rem;
+    position: relative; /* Needed for ::after positioning */
+    display: inline-block; /* Ensure it wraps only the text */
 }
 
-.nav-links:hover {
-    background-color: #b7d6e6; /* Hover effect color */
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
+/* Add the underline effect with ::after */
+.nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: 14px; /* Adjust the position slightly below the text */
+    left: 50%; /* Start in the center */
+    transform: translateX(-50%); /* Center the underline */
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: transparent; /* Default transparent color */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* On hover, expand the underline to match the text width */
+.nav-links:hover::after {
+    width: 80%; /* Full width of the text only */
+    background-color: #454545; /* Default hover underline color */
+}
+
+.nav-links.active::after {
+    width: 80%; /* Ensure full-width underline */
+    background-color: #454545; /* Customize the color for the current page */
 }
 
 .menu-icon {
@@ -448,8 +494,8 @@ html, body {
     vertical-align: middle; /* This aligns the star with the middle of the line of text */
     margin-left: 5px; /* Adjust spacing between the star and the text */
     margin-right: 5px; 
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
 }
 
 .mail-icon {

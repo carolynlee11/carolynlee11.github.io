@@ -140,3 +140,27 @@
         background-position: 0% 50%;
     }
 }
+
+/* Play page fade-in animations */
+@keyframes playFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-visible {
+    animation: playFadeIn 0.8s ease-in-out forwards;
+    opacity: 1; /* Ensure it's visible */
+}
+
+.project-section,
+.headersub {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slight offset for animation */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
