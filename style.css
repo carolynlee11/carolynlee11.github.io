@@ -304,6 +304,10 @@ p {
     display: none;
 }
 
+.linkedin-text {
+    display: none; /* Hide the "LinkedIn" text on desktop */
+}
+
 /* Mobile styles for Navbar*/
 @media screen and (max-width: 768px) {
     .nav-logo {
@@ -366,12 +370,15 @@ p {
         display: none; /* Hide dividers on mobile */
     }
 
+    .linkedin-text {
+        display:contents; /* Hide the "LinkedIn" text on desktop */
+    }
+
     .linkedin-icon {
         display: none; /* Hide LinkedIn icon on mobile */
     }
 
     .linkedin-link::after {
-        content: 'linkedin'; /* Add LinkedIn text on mobile */
         font-size: 24px; /* Adjust size as needed */
         color: #454545;
         text-decoration: none;
