@@ -5,73 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>planet - carolyn lee</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../project-page.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../play.css">
+
+    <link rel="stylesheet" href="fonts/PPEiko-LightItalic.otf"> <!-- Include your PP Eiko font here -->
 </head>
 
 <body>
-    <!-- navbar placeholder -->
+    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <section class="general-section">
-        <h2>
-            <img src="/elements/star.svg" class="star-icon">
-            <span class="highlight">planet<span class="underline"></span></span>.
-        </h2>
-        <h3>cs 147 final project</h3>
-    </section>
-
-    <section class="project-details">
-        <div class="project-left">
-            <h3>project details:</h3>
-            <p>Planet is a mental health-focused app designed and developed as part of the CS 147: Introduction to Human-Computer Interaction Design course at Stanford University. Over 10 weeks, my team and I went through the full user-centered design cycle, including research, ideation, prototyping, and evaluation. </p>
+    <!-- Hero Section -->
+    <div class="hero-title-section">
+        <h1 class="hero-title">Planet</h1>
+        <img src="/elements/arrow.svg" class="scroll-arrow" alt="Scroll Down Arrow">
+    </div>
+    
+    <div class="scroller" data-speed="slow" data-direction="left">
+        <div class="scroller__inner">
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 1" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 2" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 3" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 4" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 5" />
         </div>
-        <div class="project-right">
-            <h3>timeline:</h3>
-            <p>september 2024 - december 2024</p>
-            <h3>what i did:</h3>
-            <p>web development, ios development, user needfinding research, ui/ux design</p>
+      </div>
+      
+
+    <!-- Project Details Section -->
+    <section class="project-details fade-in">
+        <div class="details-column">
+            <h3>Project Detail</h3>
+            <p>CS 147 Fall 2024<br>Introduction to Human-Computer Interaction Design Final Project</p>
+        </div>
+        <div class="details-column">
+            <h3>Team</h3>
+            <p>Carolyn Lee<br>Kristine Ma<br>Lucas Wang<br>Evelyn Song</p>
+        </div>
+        <div class="details-column">
+            <h3>Role</h3>
+            <p>UI/UX Designer,<br>Web Designer,<br>Developer</p>
+        </div>
+        <div class="details-column">
+            <h3>Timeline</h3>
+            <p>10 Weeks</p>
         </div>
     </section>
+    <hr class="section-divider">
 
-    <section class="project-summary">
-        <h3>website:</h3>
-        <p>Along with our final app, we were required to create a website for our deliverables. I helped design and develop the Planet website, taking care to incorporate our design values. This site won
-            the "Best Website" award at the CS 147 Final Expo. If you wish to see our design process in greater detail, please visit https://web.stanford.edu/class/cs147/projects/Technology-for-Mental-Health/Planet/
+    <!-- Overview Section -->
+    <section class="main-content fade-in">
+        <h1>Overview</h1>
+        <p>
+            Through an intensive 10-week project as part of CS 147: Introduction to Human-Computer Interaction Design, 
+            our team was driven to explore solutions under the studio theme "Technology for Mental Health."
+        </p>
+        <p>
+            Planet is a mobile app that reimagines social connectivity by providing a real-time, visual representation of friends' emotions and statuses. 
+            Whether someone is open to hanging out or could use a supportive gesture, the app makes reaching out effortless and natural. 
+            Rooted in the principles of rapid prototyping, cognitive design, and iterative user feedback, Planet fosters a community 
+            where building connections feels intuitive and supportive.
         </p>
 
-        <section class="project-images">
-            <img src="/elements/projectimages/website1.png">
-            <img src="/elements/projectimages/website2.png">
-            <!-- Add more images as needed -->
-        </section>
-
-        <h3>demo video:</h3>
         <div class="video-container">
             <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/j_qaeIyMq_U?si=0nZJhnpBnLKnymLw" 
+                src="https://www.youtube.com/embed/j_qaeIyMq_U" 
                 title="YouTube video player" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
     </section>
-    <section class="pdf-embed">
-        <h3>design report:</h3>
-        <iframe src="Planet Final Report.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+    <!-- Website Section -->
+     <!-- Overview Section -->
+    <section class="main-content fade-in">
+        <h1>Website</h1>
+        <p>
+            As part of our final project, we created a website to showcase our app and deliverables. 
+            I served as the web developer and designer for the Planet website, ensuring that our design 
+            values were thoughtfully incorporated throughout. This site earned the "Best Website" award at 
+            the CS 147 Final Expo. To explore our design process in detail, click <a href="https://web.stanford.edu/class/cs147/projects/Technology-for-Mental-Health/Planet/" 
+            target="_blank" 
+            class="highlight-link">here</a>.
+        </p>
+        <video class="website-video" autoplay loop muted playsinline>
+            <source src="/elements/projectimages/website.mov" type="video/mp4">
+        </video>
+
     </section>
 
-    <section class="project-summary">
+    <section class="main-content fade-in">
+        <h1>Needfinding</h1>
+        <p>
+            To understand the mental health challenges faced by university students, we conducted a needfinding process focused on shared stressors like academics, extracurriculars, and work-life balance. Through four initial in-depth interviews with diverse participants, we explored coping mechanisms, social support, and mental health resources. Using empathy maps, we distilled key themes such as the value of <b>social connections</b>, <b>reluctance to use resources</b>, and <b>stress from overwhelming workloads</b>. These insights guided our project to address pressing student needs effectively.        </p>
+        </p>
+        <div class="grid-image">
+            <img src="/elements/projectimages/A1-1.png" alt="Gallery Image 1">
+            <img src="/elements/projectimages/A1-2.png" alt="Gallery Image 1">
+            <img src="/elements/projectimages/A1-3.png" alt="Gallery Image 1">
+            <img src="/elements/projectimages/A1-4.png" alt="Gallery Image 1">
+
+        </div>
     </section>
 
-    <script src="/script.js"></script>
+    <section class="main-content fade-in">
+        <h1>POV Statements</h1>
+        <p>
+            After completing the needfinding process, we transitioned to defining actionable problem statements through the creation of Points of View (POVs). By synthesizing the insights gathered from our interviews and empathy maps, we articulated POVs that captured the needs and challenges of our users, ensuring our problem space was well-defined. This process allowed us to reframe our design challenge into clear, meaningful statements, setting the stage for ideation. Below are our top 3 POVs. 
+        </p>
+
+        <div class="pov-statement fade-in">
+            <img src="/elements/projectimages/sophia.png" alt="Sophia" class="pov-avatar">
+            <div class="pov-text">
+                <p><b>We met…</b><br>Sofia, a junior majoring in political science at Stanford University who occasionally struggles with planning academics and social events.</p>
+                <p><b>We were surprised to notice...</b><br>She feels guilt and the need to punish herself for prioritizing social life over academics.</p>
+                <p><b>We wonder if this means...</b><br>She feels like she should choose between her social life and academics.</p>
+                <p><b>It would be game changing...</b><br>If she could eliminate the guilt she feels after a social hangout.</p>
+            </div>
+        </div>
+        <div class="pov-statement fade-in">
+            <img src="/elements/projectimages/daniel.png" alt="Daniel" class="pov-avatar">
+            <div class="pov-text">
+                <p><b>We met…</b><br>Daniel, an undeclared student at the University of Chicago wants to find more external motivation to be productive.</p>
+                <p><b>We were surprised to notice...</b><br>That he prefers working in groups, but often ends up working on his own.</p>
+                <p><b>We wonder if this means...</b><br>He is anxious to create / join study groups to meet up and complete work together.</p>
+                <p><b>It would be game changing...</b><br>If he could reduce anxiety in forming or finding these groups.</p>
+            </div>
+        </div>
+        <div class="pov-statement fade-in">
+            <img src="/elements/projectimages/grace.png" alt="Grace" class="pov-avatar">
+            <div class="pov-text">
+                <p><b>We met…</b><br>Grace, an ambitious international junior at UPenn studying engineering and business.</p>
+                <p><b>We were surprised to notice...</b><br>Despite her willingness to reach out and social events offered by the school, Grace doesn’t feel like she has a close group of friends, and that most friends disappear after a while. </p>
+                <p><b>We wonder if this means...</b><br>College students need more support to maintain their existing / prior friend groups.</p>
+                <p><b>It would be game changing...</b><br>To enable students to make more friends while maintaining good connections with their existing friends.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <h1>HMW Statements</h1>
+        <p>For each POV, we brainstormed 10 "How Might We" (HMW) statements to explore innovative solutions. As a team, we reviewed all the HMWs and voted on the top three overall, prioritizing those that resonated deeply with our interviews and addressed key insights about mental health. These top-voted HMWs guided our ideation phase, ensuring a focused and empathetic approach to addressing user challenges.
+        </p>
+        <img class="single-image" src="/elements/projectimages/HMW.png" alt="Descriptive Text">
+
+    </section>
+    <!-- Design Report Section -->
+    
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>Contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
-
-<!-- footer  -->
-<footer class="footer-section">
-    <p>contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
-</footer>
-
 </html>

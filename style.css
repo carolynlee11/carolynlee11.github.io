@@ -717,7 +717,7 @@ html, body {
     height: 1px;
     background-color: #454545;
     margin-top: 50px; /* Space above the line */
-    margin-bottom: 30px; /* Space below the line */
+    margin-bottom: 0px; /* Space below the line */
 }
 
 .footer-section {

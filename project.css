@@ -1,0 +1,288 @@
+/* PP Eiko Italic Font */
+@font-face {
+    font-family: 'PPEikoItalic';
+    src: url('./fonts/PPEiko-LightItalic.otf') format('opentype'); /* Corrected path */
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* General Body Style */
+body {
+    font-family: "Space Grotesk", sans-serif;
+    color: #454545;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #FFFEFB;
+}
+
+/* Hero Title Section */
+.hero-title-section {
+    animation: fadeInUp 1s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFEFB;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'PPEikoItalic', serif; /* Use PP Eiko Italic */
+    font-size: 120px;
+    color: #454545;
+    margin: 0;
+    padding: 0;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    margin-top: 20px;
+    width: 24px;
+    height: auto;
+    animation: upDown 1.5s infinite;
+}
+
+/* Animation for Arrow */
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* First column is twice as wide as the others */
+    gap: 20px; /* Space between columns */
+    background-color: #FFFEFB; /* Match the overall theme */
+    text-align: left;
+    margin-left: 80px;
+    margin-top: -120px; /* Move the section up by reducing the top margin */
+}
+
+.details-column h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px; /* Heading size */
+    font-weight: 600; /* Bold for emphasis */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #454545;
+}
+
+.details-column p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px; /* Text size */
+    font-weight: 300; /* Light weight for body text */
+    line-height: 1.5; /* Space between lines */
+    color: #454545;
+    margin: 0; /* Remove default margin */
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 40px 80px; /* Add padding for proper spacing */
+    background-color: #FFFEFB; /* Match overall theme */
+}
+
+/* Style for H1 in Main Content */
+.main-content h1 {
+    font-family: 'PPEikoItalic', serif; /* Use PP Eiko Italic */
+    font-size: 36px; /* Adjust size as needed */
+    color: #454545; /* Match the theme */
+    margin-bottom: 20px; /* Add spacing below */
+    animation-delay: 0.3s; /* Delay for smooth transition */
+}
+
+/* Style for Paragraphs in Main Content */
+.main-content p {
+    font-family: "Space Grotesk", sans-serif; /* Use Space Grotesk */
+    font-size: 16px; /* Text size */
+    font-weight: 300; /* Light font weight */
+    line-height: 1.8; /* Spacing between lines */
+    color: #454545; /* Match theme */
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    animation-delay: 0.6s; /* Delay for smooth transition */
+}
+
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the video */
+    align-items: center;
+    padding: 20px 0; /* Add padding above and below */
+}
+
+.highlight-link {
+    font-weight: bold; /* Make the text bold */
+    color: #454545; /* Text color */
+    position: relative; /* For pseudo-element positioning */
+    cursor: pointer; /* Change cursor to pointer */
+    text-decoration: none; /* Remove default underline */
+}
+
+.highlight-link::after {
+    content: ''; /* Empty content for underline effect */
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: -2px; /* Adjust position slightly below the text */
+    width: 0; /* Initial width is 0 */
+    height: 2px; /* Height of the underline */
+    background-color: #454545; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+}
+
+.highlight-link:hover::after {
+    width: 100%; /* Expand the underline to full width */
+    left: 0; /* Move from center to left */
+}
+
+.website-video {
+    display: block; /* Centers the video horizontally */
+    margin: 20px auto; /* Adds spacing around the video */
+    max-width: 80%; /* Ensures the video is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.scroller {
+    animation: fadeInUp 1s ease-in-out forwards;
+    max-width: 100%; /* Use full width */
+    overflow: hidden;
+    position: relative;
+    top: -160px;
+  }
+  
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+  .scroller__inner img {
+    height: 250px;
+    flex-shrink: 0;
+    width: auto;
+    object-fit: cover;
+  }
+
+.grid-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 80%;
+    margin-bottom: 30px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0 auto; /* Center the grid within the container */
+}
+
+.grid-image img {
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.grid-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-image img {
+    width: 100%;
+}
+
+.pov-statement {
+    display: flex;
+    align-items: flex-start; /* Align the avatar and text */
+    justify-content: center; /* Center the entire statement horizontally */
+    gap: 30px; /* Space between avatar and text */
+    margin: 30px auto; /* Center horizontally and add vertical spacing */
+    max-width: 80%;
+    
+}
+
+.pov-avatar {
+    flex-shrink: 0; /* Prevent avatar from resizing */
+    width: 120px; /* Set avatar width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: Make avatar circular */
+    border: 1px solid #454545; /* Add a border (change color and size as needed) */
+
+}
+
+.pov-text {
+    font-family: "Space Grotesk", sans-serif; /* Use your desired font */
+    color: #454545; /* Text color */
+    line-height: 1.8; /* Improve readability */
+}
+
+.pov-text p {
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+.single-image {
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 20px auto; /* Centers the image horizontally */
+    max-width: 80%; /* Restricts the width to 80% of the container */
+    height: auto; /* Maintains the aspect ratio */
+    transition: transform 0.3s ease; /* Optional: Adds hover effect */
+}
+
+.fade-in-visible {
+    animation: fadeUp 0.8s ease-in-out forwards;
+    opacity: 1; /* Ensure the element is visible */
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slight offset for animation */
+}

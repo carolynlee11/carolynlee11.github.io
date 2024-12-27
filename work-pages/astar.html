@@ -3,52 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a*star research internship - carolyn lee</title>
+    <title>a*star - carolyn lee</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../project-page.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../play.css">
+
+    <link rel="stylesheet" href="fonts/PPEiko-LightItalic.otf"> <!-- Include your PP Eiko font here -->
+
 </head>
 
 <body>
-    <!-- navbar placeholder -->
+    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <section class="general-section">
-        <h2>
-            <img src="/elements/star.svg" class="star-icon">
-            <span class="highlight">cs research internship<span class="underline"></span></span>.
-        </h2>
-        <h3>agency for science, technology, and research (a*star)</h3>
-    </section>
-
-    <section class="project-details">
-        <div class="project-left">
-            <h3>project details:</h3>
-            <p>developing an educational ai model based on nlp techniques and understanding pedagogical systems used in singapore.</p>
-        </div>
-        <div class="project-right">
-            <h3>timeline:</h3>
-            <p>june 2023 - september 2023</p>
-            <h3>what i did:</h3>
-            <p>data cleaning, training machine learning model, coauthor research paper</p>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <div class="hero-title-section">
+        <h1 class="hero-title" style="font-size: 80px">Agency for Science, Technology, and Research</h1>
+        <img src="/elements/arrow.svg" class="scroll-arrow" alt="Scroll Down Arrow">
+    </div>
     
-    <section class="pdf-embed">
-        <h3>research paper:</h3>
-        <iframe src="2404.03429v1.pdf" width="100%" height="600px" style="border:none;"></iframe>
+    <div class="scroller" data-speed="slow" data-direction="left">
+        <div class="scroller__inner">
+          <img src="/elements/astar.svg" alt="Project Image 1" />
+          <img src="/elements/astar.svg" alt="Project Image 1" />
+          <img src="/elements/astar.svg" alt="Project Image 1" />
+          <img src="/elements/astar.svg" alt="Project Image 1" />
+          <img src="/elements/astar.svg" alt="Project Image 1" />
+        </div>
+      </div>
+      
+
+    <!-- Project Details Section -->
+    <section class="project-details fade-in">
+        <div class="details-column">
+            <h3>Project Detail</h3>
+            <p>Agency for Science, Technology, and Research<br>CS Research Internship</p>
+        </div>
+        <div class="details-column">
+            <h3>Team</h3>
+            <p>Carolyn Lee<br>
+        </div>
+        <div class="details-column">
+            <h3>Role</h3>
+            <p>Research Intern</p>
+        </div>
+        <div class="details-column">
+            <h3>Timeline</h3>
+            <p>10 Weeks</p>
+        </div>
+    </section>
+    <hr class="section-divider">
+
+    <!-- Overview Section -->
+    <section class="main-content fade-in">
+        <h1>Overview</h1>
+        <p>
+            During my research internship at A*STAR, I worked on developing an AI model to help elementary school students learn their mother tongue. I processed data in both English and Chinese, bridging my technical and language skills. The project was a collaboration with the Singapore Ministry of Education, and it was exciting to see how our work could have a direct impact on improving education.
+
+            I also co-authored a research paper as part of this project, which gave me the opportunity to share our findings with the academic community. This internship reinforced my passion for using technology to create meaningful learning experiences and deepened my interest in the intersection of AI, education, and language.
+        </p>
     </section>
 
-    <section class="project-summary">
-        <h3>summary:</h3>
-        <p>during my research internship, i developed and trained an ai model designed to assist elementary school students in learning their mother tongue language. the project team collaborated closely with the singapore ministry of education to align the model with educational standards and goals. additionally, i coauthored a research paper detailing our findings and the impact of the ai model on language learning. this project involved processing bilingual data in both english and chinese to create an effective and engaging learning tool.</p>
+    <section class="main-content fade-in">
+        <h1>Research Paper</h1>
+        <div class="pdf-container">
+            <iframe 
+                src="/work-pages/2404.03429v1.pdf" 
+                width="100%" 
+                height="600px" 
+                style="border: none;">
+            </iframe>
+        </div>
     </section>
 
-    <script src="/script.js"></script>
+
+    <!-- Website Section -->
+     <!-- Overview Section -->
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>Contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
-
-<!-- footer  -->
-<footer class="footer-section">
-    <p>contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
-</footer>
-
 </html>

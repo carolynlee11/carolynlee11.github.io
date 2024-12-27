@@ -126,5 +126,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
         playSections.forEach((section) => playObserver.observe(section));
     }
+
+    
+    const scrollers = document.querySelectorAll(".scroller");
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+
+  function addAnimation() {
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute("data-animated", true);
+
+      const scrollerInner = scroller.querySelector(".scroller__inner");
+      const scrollerContent = Array.from(scrollerInner.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+
+  const fadeSections = document.querySelectorAll(
+    ".project-details, .main-content, .pov-statement"
+);
+
+    const fadeObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in-visible");
+                    fadeObserver.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        },
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    fadeSections.forEach((section) => {
+        section.classList.add("fade-in"); // Add initial fade-in class
+        fadeObserver.observe(section);
+});
     
 });
