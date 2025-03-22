@@ -1,9 +1,10 @@
 /* PP Eiko Italic Font */
 @font-face {
     font-family: 'PPEikoItalic';
-    src: url('./fonts/PPEiko-LightItalic.otf') format('opentype'); /* Corrected path */
+    src: url('./fonts/PPEiko-LightItalic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
+    font-display: swa;
 }
 
 /* General Body Style */
@@ -36,6 +37,8 @@ body {
     color: #454545;
     margin: 0;
     padding: 0;
+    font-style: italic;
+    font-weight: 500;
 }
 
 /* Scroll Arrow */
@@ -92,6 +95,7 @@ body {
 /* Style for H1 in Main Content */
 .main-content h1 {
     font-family: 'PPEikoItalic', serif; /* Use PP Eiko Italic */
+    font-style: italic;
     font-size: 36px; /* Adjust size as needed */
     color: #454545; /* Match the theme */
     margin-bottom: 20px; /* Add spacing below */
@@ -204,6 +208,14 @@ body {
     object-fit: cover;
   }
 
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+  }
+
 .grid-image {
     display: flex;
     flex-wrap: wrap;
@@ -261,7 +273,7 @@ body {
 .single-image {
     display: block; /* Ensures the image behaves as a block element */
     margin: 20px auto; /* Centers the image horizontally */
-    max-width: 80%; /* Restricts the width to 80% of the container */
+    width: 60%; /* Restricts the width to 80% of the container */
     height: auto; /* Maintains the aspect ratio */
     transition: transform 0.3s ease; /* Optional: Adds hover effect */
 }
@@ -291,6 +303,27 @@ body {
     transform: scale(1.05);
 }
 
+.concept-images {
+    display: flex;
+    justify-content: center;
+    align-items:center; /* or center depending on visual preference */
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.concept-image {
+    height: 500px; /* fixed height */
+    width: auto; /* maintain aspect ratio */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.concept-image:hover {
+    transform: scale(1.05);
+}
+
 /* Tablet: 2x4 */
 @media (max-width: 1024px) {
     .poster-images {
@@ -300,11 +333,57 @@ body {
 
 /* Mobile: 1x8 */
 @media (max-width: 600px) {
+    .main-content {
+        padding: 20px 20px; /* Smaller top/bottom and left/right padding */
+    }
+
     .poster-images {
         grid-template-columns: 1fr;
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    .hero-title-section {
+        height: 80vh; /* make hero section shorter */
+        padding-top: 20px; /* shift it up */
+      }
+    
+      .hero-title {
+        font-size: 80px; /* smaller title for mobile */
+      }
+    
+      .scroll-arrow {
+        margin-top: 20px; /* reduce space above arrow */
+        width: 18px; /* smaller arrow */
+      }
+    
+      .scroller {
+        top: -100px; /* move the scroller up */
+        margin-bottom: -60px; /* prevent overlap with next section */
+      }
+
+      .project-details {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack in one column */
+        row-gap: 20px; /* Add space between rows */
+        margin-left: 20px; /* Less horizontal margin on mobile */
+        margin-right: 20px;
+        margin-top: 0; /* Optional: reset top margin if too high */
+      }
+    
+      .details-column {
+        width: 100%;
+      }
+    
+      .details-column h3,
+      .details-column p {
+        text-align: left;
+      }
+      .single-image {
+        width: 100%; /* Restricts the width to 80% of the container */
+       
+    }
+    
 }
 
 @keyframes fadeUp {
@@ -322,3 +401,4 @@ body {
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Slight offset for animation */
 }
+

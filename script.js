@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const fadeSections = document.querySelectorAll(
-    ".project-details, .main-content, .pov-statement"
+    ".project-details, .main-content, .pov-statement, .single-image, .poster-images"
 );
 
     const fadeObserver = new IntersectionObserver(
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         },
-        { threshold: 0.1 } // Trigger when 10% of the element is visible
+        { threshold: 0.01 } // Trigger when 10% of the element is visible
     );
 
     fadeSections.forEach((section) => {
