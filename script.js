@@ -168,6 +168,32 @@ document.addEventListener("DOMContentLoaded", function() {
     fadeSections.forEach((section) => {
         section.classList.add("fade-in"); // Add initial fade-in class
         fadeObserver.observe(section);
-});
-    
+    });
+
+    const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".modal .close");
+
+  // Attach click event to all zoomable images
+  document.querySelectorAll(".zoomable").forEach((img) => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    modalImg.src = "";
+  };
+
+  // Optional: Close modal when clicking outside the image
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
+  };
 });

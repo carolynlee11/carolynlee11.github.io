@@ -783,25 +783,28 @@ html, body {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px; /* Space between project cards */
+    grid-template-columns: repeat(2, 1fr); /* lock to 2 cards per row */
+    gap: 20px;
     padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 .project-card {
-    background-color: #ffffff; /* Background color of the container */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
-    overflow: hidden; /* Clip the children to fit inside the rounded corners */
-    transition: transform 0.3s; /* Smooth transform transition */
-    text-align: center; /* Center align text */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 400px; /* Fixed height for the card */
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.618 / 1; /* its the golden ratio! */
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
 
 .project-card:hover {
     transform: translateY(-10px); /* Lift the card slightly on hover */
@@ -850,6 +853,52 @@ html, body {
     color: #454545; /* Set the text color */
 }
 
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Modal Image */
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color:#FFFEFB;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .zoomable {
+    cursor: pointer;
+  }
+  
+  
+  /* Optional: add fade-in effect */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+
 @media (max-width: 768px) {
 
     /* Adjust the work section on mobile */
@@ -870,7 +919,7 @@ html, body {
     }
 
     .project-card {
-        height: 200px; /* Adjust height for mobile */
+        aspect-ratio: 1.618 / 1;
     }
 
     .project-info h3 {

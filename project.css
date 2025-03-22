@@ -200,7 +200,7 @@ body {
   .scroller__inner img {
     height: 250px;
     flex-shrink: 0;
-    width: auto;
+    width: 400px;
     object-fit: cover;
   }
 
@@ -269,6 +269,42 @@ body {
 .fade-in-visible {
     animation: fadeUp 0.8s ease-in-out forwards;
     opacity: 1; /* Ensure the element is visible */
+}
+
+
+.poster-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px;
+}
+
+.poster-images img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.poster-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet: 2x4 */
+@media (max-width: 1024px) {
+    .poster-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1x8 */
+@media (max-width: 600px) {
+    .poster-images {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @keyframes fadeUp {
