@@ -196,4 +196,49 @@ document.addEventListener("DOMContentLoaded", function() {
       modalImg.src = "";
     }
   };
+
+  // Circular Project Navigation
+  function createProjectNav() {
+    const projects = [
+      { title: "Mori", path: "mori.html" },
+      { title: "Planet", path: "planet.html" },
+      { title: "Skywalk", path: "skywalk.html" },
+      { title: "JSL", path: "coming-soon.html" },
+      { title: "A*Star", path: "astar.html" },
+      { title: "Stanford HCI Group", path: "art-tcg.html" },
+    ];
+  
+    const currentPath = location.pathname.split("/").pop(); // get current filename
+    const currentIndex = projects.findIndex((project) => project.path === currentPath);
+  
+    if (currentIndex === -1) return;
+  
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+    const nextIndex = (currentIndex + 1) % projects.length;
+  
+    const navContainer = document.createElement("div");
+    navContainer.className = "project-nav";
+  
+    const prevLink = document.createElement("a");
+    prevLink.href = projects[prevIndex].path;
+    prevLink.className = "project-link";
+    prevLink.innerHTML = `&lsaquo; ${projects[prevIndex].title}`;
+  
+    const nextLink = document.createElement("a");
+    nextLink.href = projects[nextIndex].path;
+    nextLink.className = "project-link";
+    nextLink.innerHTML = `${projects[nextIndex].title} &rsaquo;`;
+  
+    navContainer.appendChild(prevLink);
+    navContainer.appendChild(nextLink);
+  
+    const placeholder = document.getElementById("project-nav-placeholder");
+    if (placeholder) {
+      placeholder.appendChild(navContainer);
+    }
+  }
+  
+
+  createProjectNav();
+
 });

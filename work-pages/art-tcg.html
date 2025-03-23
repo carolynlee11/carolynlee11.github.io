@@ -3,60 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>art trading card game ui development - carolyn lee</title>
+    <title>planet - carolyn lee</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../project-page.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="../play.css">
+
 </head>
 
 <body>
-    <!-- navbar placeholder -->
+    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <section class="general-section">
-        <h2>
-            <img src="/elements/star.svg" class="star-icon">
-            <span class="highlight">art trading card game ui development<span class="underline"></span></span>.
-        </h2>
-        <h3>stanford human-computer interaction group</h3>
-    </section>
-
-    <section class="project-details">
-        <div class="project-left">
-            <h3>project details:</h3>
-            <p>designing a collaborative 2D-illustration game experience where artists, namely illustrators, co-create together.</p>
+    <!-- Hero Section -->
+    <div class="hero-title-section">
+        <h1 class="hero-title">Stanford HCI Group</h1>
+        <img src="/elements/arrow.svg" class="scroll-arrow" alt="Scroll Down Arrow">
+    </div>
+    
+    <div class="scroller" data-speed="slow" data-direction="left">
+        <div class="scroller__inner">
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 1" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 2" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 3" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 4" />
+          <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 5" />
         </div>
-        <div class="project-right">
-            <h3>timeline:</h3>
-            <p>april 2024 - june 2024</p>
-            <h3>what i did:</h3>
-            <p>ui/ux design, frontend development (react, typescript, css)</p>
+      </div>
+      
+
+    <!-- Project Details Section -->
+    <section class="project-details fade-in">
+        <div class="details-column">
+            <h3>Project Detail</h3>
+            <p>CS 147 Fall 2024<br>Introduction to Human-Computer Interaction Design Final Project</p>
+        </div>
+        <div class="details-column">
+            <h3>Team</h3>
+            <p>Carolyn Lee<br>Kristine Ma<br>Lucas Wang<br>Evelyn Song</p>
+        </div>
+        <div class="details-column">
+            <h3>Role</h3>
+            <p>UI/UX Designer,<br>Web Designer,<br>Developer</p>
+        </div>
+        <div class="details-column">
+            <h3>Timeline</h3>
+            <p>10 Weeks</p>
+        </div>
+    </section>
+    <hr class="section-divider">
+
+    <!-- Overview Section -->
+    <section class="main-content fade-in">
+        <h1>Overview</h1>
+        <p>
+            Through an intensive 10-week project as part of CS 147: Introduction to Human-Computer Interaction Design, 
+            our team was driven to explore solutions under the studio theme "Technology for Mental Health."
+        </p>
+        <p>
+            Planet is a mobile app that reimagines social connectivity by providing a real-time, visual representation of friends' emotions and statuses. 
+            Whether someone is open to hanging out or could use a supportive gesture, the app makes reaching out effortless and natural. 
+            Rooted in the principles of rapid prototyping, cognitive design, and iterative user feedback, Planet fosters a community 
+            where building connections feels intuitive and supportive.
+        </p>
+
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/j_qaeIyMq_U" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
-    <section class="project-images">
-        <img src="/elements/project1-img1.png" alt="Project Image 1">
-        <img src="/elements/project1-img2.png" alt="Project Image 2">
-        <!-- Add more images as needed -->
-    </section>
+    <!-- Website Section -->
+     <!-- Overview Section -->
+    <section class="main-content fade-in">
+        <h1>Website</h1>
+        <p>
+            As part of our final project, we created a website to showcase our app and deliverables. 
+            I served as the web developer and designer for the Planet website, ensuring that our design 
+            values were thoughtfully incorporated throughout. This site earned the "Best Website" award at 
+            the CS 147 Final Expo. To explore our design process in detail, click <a href="https://web.stanford.edu/class/cs147/projects/Technology-for-Mental-Health/Planet/" 
+            target="_blank" 
+            class="highlight-link">here</a>.
+        </p>
+        <video class="website-video" autoplay loop muted playsinline>
+            <source src="/elements/projectimages/website.mov" type="video/mp4">
+        </video>
 
-    <section class="project-summary">
-        <h3>summary:</h3>
-        <p>in this project, i leveraged react, typescript, and css to transform a figma design into a fully functional art trading game. the goal was to create an engaging and visually appealing platform where users can trade and collect digital art pieces. here’s a detailed overview of the process:</p>
-        <h3>key technologies used:</h3>
-        <ul>
-            <li>react: utilized for building the interactive user interface.</li>
-            <li>typescript: employed for type safety and to enhance code maintainability.</li>
-            <li>css: used for styling and ensuring the design matched the figma prototype precisely.</li>
-        </ul>
     </section>
+    <div id="project-nav-placeholder"></div>
 
-    <script src="/script.js"></script>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>Contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="../script.js"></script>
 </body>
-
-
-<!-- footer  -->
-<footer class="footer-section">
-    <p>contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
-</footer>
-
 </html>

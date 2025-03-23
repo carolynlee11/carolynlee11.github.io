@@ -324,6 +324,33 @@ body {
     transform: scale(1.05);
 }
 
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px 40px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #454545;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #454545;
+    transition: transform 0.2s ease;
+  }
+  
+  .project-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .project-link .label {
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+
 /* Tablet: 2x4 */
 @media (max-width: 1024px) {
     .poster-images {
