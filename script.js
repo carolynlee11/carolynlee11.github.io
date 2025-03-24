@@ -203,9 +203,8 @@ document.addEventListener("DOMContentLoaded", function() {
       { title: "Mori", path: "mori.html" },
       { title: "Planet", path: "planet.html" },
       { title: "Skywalk", path: "skywalk.html" },
-      { title: "JSL", path: "coming-soon.html" },
-      { title: "A*Star", path: "astar.html" },
       { title: "Stanford HCI Group", path: "art-tcg.html" },
+      { title: "A*Star", path: "astar.html" },
     ];
   
     const currentPath = location.pathname.split("/").pop(); // get current filename
