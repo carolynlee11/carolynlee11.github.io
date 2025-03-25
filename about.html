@@ -5,74 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about - carolyn lee</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="icon" href="elements/newfavicon.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="180x180" href="elements/newfavicon.png">
-    <link rel="mask-icon" href="elements/newfavicon.png" color="#5a5a5a">
 </head>
 <body>
-    <!-- Navbar placeholder -->
+
+    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <!-- About section content -->
-    <section id="about" class="about-section">
-        <h2>
-            <img src="elements/star.svg" class="star-icon">
-            <span class="highlight">about me<span class="underline"></span></span>.
-        </h2>
-        <section class="page-text-container">
-            <div class="about-container">
-                <div class="about-image-wrapper">
-                    <img src="elements/me.jpeg" class="rounded-image"/>
-                </div>
-                <div class="about-text">
-                    <p>
-                        nice to meet you 👋 <br> <br>
-                        my name is carolyn lee and i am a student at stanford university majoring in computer science and minoring in east asian studies. my passions lie within creating human-centered and accessible technology. <br> <br>
-                        if you’re curious about my creative work in graphic design and writing, visit the <a href="play.html" style="color: inherit; text-decoration: underline;">c-side archives</a>! <br> <br>
-                        you can reach me at lcarolyn@stanford.edu
-                        <br>
-                    </p>
-                </div>
+    <section class="about-section">
+        <!-- Intro Section -->
+        <div class="about-container reverse fade-in">
+            <div class="about-text">
+                <h2>get to know me through...</h2>
+                <h1>AN INTRO.</h1>
+                <p>
+                    Hi, I'm Carolyn Lee! 👋<br><br>
+                    I'm a CS student at Stanford University specializing in Human-Computer Interaction, with a minor in East Asian Studies. 
+                    At my core, I'm a creative—whether through design, technology, or storytelling, I love exploring how people interact with the world around them.<br><br>
+                    My work focuses on human-centered and accessible technology, blending design thinking with software development to create experiences that feel intuitive, engaging, and meaningful. 
+                    When I’m not coding or designing, you can probably find me experimenting with graphic design, writing, or finding inspiration in the ordinary. 
+                </p>
             </div>
-            
+            <div class="about-image">
+                <img src="elements/me.jpeg" alt="Carolyn Lee" class="rounded-image"/>
+            </div>
+        </div>
 
-            <div class="additional-info-section">
-                <div class="info-column">
-                    <h3>skills</h3>
-                    <p2>c++ • python • html • css • javascript • figma • <br>
-                    japanese • mandarin chinese • project management</p2>
-                    <h3>interests</h3>
-                    <ul>
-                        <li>software engineering</li>
-                        <li>human-computer interaction</li>
-                        <li>ui/ux design</li>
-                        <li>graphic design</li>
-                        <li>product design</li>
-                        <li>product management</li>
-                    </ul>
-                </div>
-                <div class="info-column">
-                    <h3>coursework</h3>
-                    <ul>
-                        <li>CS106B - Programming Abstractions (Data Structures)</li>
-                        <li>CS107 - Computer Organization and Systems</li>
-                        <li>CS103 - Mathematical Foundations in Computing</li>
-                        <li>CS109 - Probability for Computer Scientists</li>
-                        <li>CS111 - Operating System Principles</li>
-                        <li>MATH51 - Linear Algebra & Multivariable Calculus</li>
-                        <li>MATH52 - Integral Calculus of Several Variables</li>
-                    </ul>
-                </div>
+        <!-- Art Section -->
+        <div class="about-container fade-in">
+            <div class="about-image">
+                <img src="elements/art.png" alt="Artworks" class="art-image"/>
             </div>
-        </section>
+            <div class="about-text">
+                <h2>get to know me through...</h2>
+                <h1>ART.</h1>
+                <p>
+                    I enjoy engaging with visual art, especially works from surrealism and impressionism movements. 
+                    Some of my favorite artists are Monet, Magritte, Hopper, and Morisot.<br><br>
+                    Beyond just viewing, I love weaving elements of art into my life and work. From designing interactive experiences 
+                    to curating visual narratives, my passion for art influences how I approach storytelling and design.
+                </p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="about-container reverse fade-in">
+            <div class="about-text">
+                <h2>get to know me through...</h2>
+                <h1>SKILLS.</h1>
+                <p>
+                    I’m proficient in both technical and design platforms, bringing together coding and creativity to build engaging experiences. 
+                    Whether it’s developing with C++, Python, JavaScript, and Swift, designing with Figma and Photoshop, or crafting interactive UIs with React and TypeScript, 
+                    I love bridging technology and design. <br><br>
+                    I also have a passion for languages—fluent in English and Chinese, conversant in Cantonese, and always learning more Japanese!
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="elements/skills.png" alt="Skills" class="art-image"/>
+            </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="about-container fade-in">
+            <div class="about-image">
+                <img src="elements/cafe.png" alt="Cafe Hopping" class="rounded-image"/>
+            </div>
+            <div class="about-text">
+                <h2>get to know me through...</h2>
+                <h1>MY INTERESTS.</h1>
+                <p>
+                    🖼️ <b>Design & Art</b> – I love exploring visual storytelling, branding, and interactive experiences.<br>
+                    🧥 <b>Fashion</b> – I find inspiration in fashion as a form of self-expression.<br>
+                    🍵 <b>Café Hopping & Food</b> – Discovering new cafés and indulging in good food brings me joy.<br>
+                    🎮 <b>Video Games</b> – I enjoy immersive narratives and visually compelling indie games.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <p>contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
-<!-- Footer -->
-<footer class="footer-section">
-    <p>contact me: <a href="mailto:lcarolyn@stanford.edu">lcarolyn@stanford.edu</a></p>
-</footer>
-
 </html>

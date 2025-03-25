@@ -467,22 +467,6 @@ html, body {
     box-sizing: border-box; /* This ensures that padding does not affect the total width or height of elements */
 }
 
-.about-section {
-    padding: 100px 20px; /* Adjust padding as needed */
-    background-color: #FFFEFB; /* Background color */
-    animation: fadeInUp 1s ease-in-out forwards; /* Fade-in and slide-up animation */
-}
-
-.about-section h2 {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 600;
-    font-size: 48px; /* Set the font size for the heading */
-    color: #454545; /* Set the color */
-    margin-bottom: 20px; /* Space below the heading */
-    text-align: left; /* Center the heading */
-    padding-left: 50px;
-}
-
 .star-icon {
     vertical-align: text-bottom; /* This aligns the star with the middle of the line of text */
     margin-right: -10px; /* Adjust spacing between the star and the text */

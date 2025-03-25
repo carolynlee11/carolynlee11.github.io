@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         playSections.forEach((section) => playObserver.observe(section));
     }
-
     
     const scrollers = document.querySelectorAll(".scroller");
 
@@ -150,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const fadeSections = document.querySelectorAll(
-    ".project-details, .main-content, .pov-statement, .single-image, .poster-images"
+    ".project-details, .main-content, .pov-statement, .single-image, .poster-images, .about-container"
 );
 
     const fadeObserver = new IntersectionObserver(
@@ -239,5 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
   createProjectNav();
+
+  
 
 });

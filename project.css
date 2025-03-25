@@ -4,7 +4,7 @@
     src: url('./fonts/PPEiko-LightItalic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
-    font-display: swa;
+    font-display: swap;
 }
 
 /* General Body Style */

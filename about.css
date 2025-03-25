@@ -1,0 +1,139 @@
+/* PP Eiko Italic Font */
+@font-face {
+    font-family: 'PPEikoItalic';
+    src: url('./fonts/PPEiko-LightItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* General About Page Styling */
+.about-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 20px;
+    padding-top: 150px;
+}
+
+.about-header {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 32px;
+    text-transform: lowercase;
+    color: #454545;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* Alternating Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text Styling */
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-family: 'PPEikoItalic', serif;
+    font-size: 16px;
+    color: #454545;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+
+.about-text h1 {
+    font-family: 'PPEikoItalic', serif;
+    font-size: 38px;
+    color: #454545;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #454545;
+}
+
+/* Image Styling */
+.about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.art-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cafe-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+/* Skills Icons */
+.skills-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills-icons img {
+    width: 40px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-visible {
+    animation: fadeUp 0.8s ease-in-out forwards;
+    opacity: 1; /* Ensure visibility */
+}
