@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const fadeSections = document.querySelectorAll(
-    ".project-details, .main-content, .pov-statement, .single-image, .poster-images, .about-container"
+    ".project-details, .main-content, .pov-statement, .single-image, .poster-images, .about-container, .project-section, .header-sub"
 );
 
     const fadeObserver = new IntersectionObserver(
