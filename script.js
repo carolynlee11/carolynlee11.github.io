@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     projectContainers.forEach(container => observer.observe(container));
     
-    if (location.pathname.includes("play.html")) {
+    if (location.pathname.includes("play")) {
         const playSections = document.querySelectorAll(".project-section, .headersub");
         const playObserver = new IntersectionObserver(
             (entries) => {
