@@ -1,45 +1,45 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Load the navbar
     fetch("/navbar.html")
     .then((response) => response.text())
     .then((data) => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
+      document.getElementById("navbar-placeholder").innerHTML = data;
 
-        const menuIcon = document.getElementById("menu-icon");
-        const closeIcon = document.getElementById("close-icon");
-        const navMenu = document.getElementById("nav-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const navMenu = document.getElementById("nav-menu");
+      const navbar = document.querySelector(".navbar");
 
-        menuIcon.addEventListener("click", function () {
-            navMenu.classList.remove("fade-out");
-            navMenu.classList.add("active");
-        });
+      menuIcon.addEventListener("click", function () {
+        navMenu.classList.remove("fade-out");
+        navMenu.classList.add("active");
+        navbar.classList.add("no-blur"); // Disable blur
+      });
 
-        closeIcon.addEventListener("click", function () {
-            navMenu.classList.add("fade-out");
+      closeIcon.addEventListener("click", function () {
+        navMenu.classList.add("fade-out");
 
-            // Remove the active class after the fade-out animation completes
-            setTimeout(() => {
-                navMenu.classList.remove("active");
-            }, 500); // Match the timeout to the fade-out animation duration
-        });
+        setTimeout(() => {
+          navMenu.classList.remove("active");
+          navbar.classList.remove("no-blur"); // Re-enable blur
+        }, ); // This matches your fade-out animation time
+      });
 
-        // Highlight the active page in the navbar
-        const navLinks = document.querySelectorAll(".nav-links");
-        const currentPath = location.pathname;
+      // Highlight the active page in the navbar
+      const navLinks = document.querySelectorAll(".nav-links");
+      const currentPath = location.pathname;
 
-        navLinks.forEach((link) => {
-            const linkPath = new URL(link.href).pathname;
+      navLinks.forEach((link) => {
+        const linkPath = new URL(link.href).pathname;
 
-            // Special case for index.html
-            if (
-                (currentPath === "/" && linkPath === "/index.html") ||
-                currentPath === linkPath
-            ) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
+        if (
+          (currentPath === "/" && linkPath === "/index.html") ||
+          currentPath === linkPath
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
     });
 
     const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
@@ -241,6 +241,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   createProjectNav();
 
-  
 
 });
+
