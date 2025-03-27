@@ -199,11 +199,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // Circular Project Navigation
   function createProjectNav() {
     const projects = [
-      { title: "Mori", path: "mori.html" },
-      { title: "Planet", path: "planet.html" },
-      { title: "Skywalk", path: "skywalk.html" },
-      { title: "Stanford HCI Group", path: "art-tcg.html" },
-      { title: "A*Star", path: "astar.html" },
+      { title: "Mori", path: "mori" },
+      { title: "Planet", path: "planet" },
+      { title: "Skywalk", path: "skywalk" },
+      { title: "Stanford HCI Group", path: "art-tcg" },
+      { title: "A*Star", path: "astar" },
     ];
   
     const currentPath = location.pathname.split("/").pop(); // get current filename
