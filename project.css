@@ -1,11 +1,5 @@
-/* PP Eiko Italic Font */
-@font-face {
-    font-family: 'PPEikoItalic';
-    src: url('./fonts/PPEiko-LightItalic.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
+/* Instrument Serif Font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
 /* General Body Style */
 body {
@@ -32,7 +26,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'PPEikoItalic', serif; /* Use PP Eiko Italic */
+    font-family: 'Instrument Serif', serif; /* Use Instrument Serif */
     font-size: 120px;
     color: #454545;
     margin: 0;
@@ -94,8 +88,9 @@ body {
 
 /* Style for H1 in Main Content */
 .main-content h1 {
-    font-family: 'PPEikoItalic', serif; /* Use PP Eiko Italic */
+    font-family: 'Instrument Serif', serif; /* Use Instrument Serif */
     font-style: italic;
+    font-weight: 300;
     font-size: 36px; /* Adjust size as needed */
     color: #454545; /* Match the theme */
     margin-bottom: 20px; /* Add spacing below */

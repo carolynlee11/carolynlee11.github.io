@@ -106,6 +106,7 @@ p {
     padding-bottom: 50px;
     box-sizing: border-box;
     animation: fadeInUp 1s ease-in-out forwards; /* Fade-in and slide-up animation */
+    margin: 0 auto; /* Center the text container */
 }
 
 
@@ -120,7 +121,7 @@ p {
 .main h2 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
-    font-size: 24px; /* Or any other size */
+    font-size: 20px; /* Reduced from 24px */
     color: #454545;
     margin: 0;
 }
@@ -317,7 +318,7 @@ p {
         justify-self: start;
         cursor: pointer;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -421,19 +422,19 @@ p {
     }
     
     .text-container h1, .work-section h2 {
-        font-size: 36px; /* Match the size of both h1 and work-section h2 */
+        font-size: 32px; /* Smaller size for mobile */
     }
     
     .text-container h2 {
-        font-size: 20px; /* Adjust the size as needed for smaller screens */
+        font-size: 16px; /* Smaller font size for mobile */
     }
     
-    .chinese {
-        font-size: 36px; /* Adjust the size for smaller screens */
+    .main .chinese {
+        font-size: 32px; /* Smaller size for mobile */
     }
     
-    .pinyin {
-        font-size: 20px; /* Adjust the size for smaller screens */
+    .main .pinyin {
+        font-size: 20px; /* Smaller size for mobile */
     }
     
     .underline {
@@ -454,7 +455,7 @@ p {
     }
 
     .scroll-arrow {
-        width: 20px; /* Adjust the width for mobile */
+        width: 16px; /* Smaller width for mobile */
         bottom: 30px; /* Adjust the position */
     }
 
@@ -809,7 +810,8 @@ html, body {
 }
 
 .project-info {
-    padding: 20px;
+    padding: 15px;
+    padding-left: 5px;
     text-align: left;
 }
 
@@ -826,7 +828,7 @@ html, body {
     font-weight: 300; /* Not bold */
     font-size: 16px; /* Set the font size */
     color: #454545; /* Set the color */
-    margin: 5px 0; /* Adjust margins */
+    margin: 5px 0 15px 0; /* Adjust margins - more bottom margin for spacing with tags */
 }
 
 .tags-container {
