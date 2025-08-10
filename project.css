@@ -35,9 +35,15 @@ body {
     font-weight: 500;
 }
 
+.hero-title-section h4 {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
 /* Scroll Arrow */
 .scroll-arrow {
-    margin-top: 20px;
+    margin-top: 80px;
     width: 24px;
     height: auto;
     animation: upDown 1.5s infinite;
@@ -59,7 +65,7 @@ body {
     gap: 20px; /* Space between columns */
     background-color: #FFFEFB; /* Match the overall theme */
     text-align: left;
-    margin-left: 80px;
+    margin-left: 120px;
     margin-top: -120px; /* Move the section up by reducing the top margin */
 }
 
@@ -82,7 +88,7 @@ body {
 
 /* Main Content Styles */
 .main-content {
-    padding: 40px 80px; /* Add padding for proper spacing */
+    padding: 40px 120px; /* Add padding for proper spacing */
     background-color: #FFFEFB; /* Match overall theme */
 }
 
@@ -237,33 +243,54 @@ body {
     width: 100%;
 }
 
+/* Container for all POV statements */
+.pov-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
 .pov-statement {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    align-items: flex-start; /* Align the avatar and text */
-    justify-content: center; /* Center the entire statement horizontally */
-    gap: 30px; /* Space between avatar and text */
-    margin: 30px auto; /* Center horizontally and add vertical spacing */
-    max-width: 80%;
-    
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+.pov-statement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .pov-avatar {
-    flex-shrink: 0; /* Prevent avatar from resizing */
-    width: 120px; /* Set avatar width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: Make avatar circular */
-    border: 1px solid #454545; /* Add a border (change color and size as needed) */
-
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #454545;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .pov-text {
-    font-family: "Space Grotesk", sans-serif; /* Use your desired font */
-    color: #454545; /* Text color */
-    line-height: 1.8; /* Improve readability */
+    font-family: "Space Grotesk", sans-serif;
+    color: #454545;
+    line-height: 1.6;
+    width: 100%;
 }
 
 .pov-text p {
-    margin-bottom: 15px; /* Space between paragraphs */
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.pov-text p b {
+    font-weight: 600;
 }
 .single-image {
     display: block; /* Ensures the image behaves as a block element */
@@ -422,5 +449,267 @@ body {
 .fade-in {
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Slight offset for animation */
+}
+
+/* HMW Container Styles */
+.hmw-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.hmw-list {
+    padding: 20px;
+}
+
+.hmw-list h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #454545;
+}
+
+.hmw-list ol {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #454545;
+    padding-left: 20px;
+}
+
+.hmw-list li {
+    margin-bottom: 12px;
+}
+
+.hmw-embed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile responsive for HMW container */
+@media (max-width: 600px) {
+    .hmw-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .hmw-list {
+        padding: 15px;
+    }
+    
+    .hmw-list h3 {
+        font-size: 20px;
+    }
+    
+    .hmw-list ol {
+        font-size: 16px;
+    }
+}
+
+/* ===== Mockup card container ===== */
+.mockup-card {
+  --card-radius: 28px;
+  --card-pad: clamp(16px, 3vw, 32px);            /* smaller padding */
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  margin: 48px 96px;                              /* a bit less margin */
+  box-shadow: 0 24px 48px rgba(0,0,0,.12);
+  background:
+    radial-gradient(900px 420px at 70% 85%, #f1c24b33 0%, #ffffff00 60%),
+    radial-gradient(760px 520px at 30% 20%, #5a8ae633 0%, #ffffff00 60%),
+    #e9eef9;
+}
+
+/* subtle paper grain (optional) */
+/* theme-driven text colors */
+.mockup-card { 
+  --title-color: #17314e; 
+  --body-color:  #2f3a45; 
+}
+.mockup-copy h2 { color: var(--title-color); }
+.mockup-copy p  { color: var(--body-color); }
+
+
+/* === Sky (your current blue) === */
+.mockup-card.sky {
+  --title-color:#17314e;
+  --body-color:#2f3a45;
+  background:
+    radial-gradient(900px 420px at 70% 85%, #f1c24b33 0%, #ffffff00 60%),
+    radial-gradient(760px 520px at 30% 20%, #5a8ae633 0%, #ffffff00 60%),
+    #e9eef9;
+}
+/* === Sage === */
+.mockup-card.sage {
+  --title-color:#153a2b;
+  --body-color:#2e473e;
+
+  /* accent position & size (defaults) */
+  --accent-x: 78%;
+  --accent-y: 90%;
+  --accent-w: 1000px;
+  --accent-h: 520px;
+
+  background:
+    radial-gradient(var(--accent-w) var(--accent-h) at var(--accent-x) var(--accent-y),
+                    rgba(243,182,136,.34) 0%, rgba(255,255,255,0) 58%),
+    radial-gradient(820px 520px at 28% 20%, rgba(152,186,166,.34) 0%, rgba(255,255,255,0) 62%),
+    radial-gradient(1200px 900px at 50% 50%, rgba(214,231,218,.40) 0%, rgba(255,255,255,0) 70%),
+    #eef4f0;
+}
+
+/* === Purple === */
+.mockup-card.purple {
+  --title-color:#251e62;
+  --body-color:#37355a;
+
+  /* accent position & size (defaults) */
+  --accent-x: 76%;
+  --accent-y: 92%;
+  --accent-w: 980px;
+  --accent-h: 500px;
+
+  background:
+    radial-gradient(var(--accent-w) var(--accent-h) at var(--accent-x) var(--accent-y),
+                    rgba(255,216,117,.34) 0%, rgba(255,255,255,0) 58%),
+    radial-gradient(840px 520px at 26% 22%, rgba(176,153,255,.28) 0%, rgba(255,255,255,0) 62%),
+    radial-gradient(1200px 900px at 50% 50%, rgba(231,224,255,.42) 0%, rgba(255,255,255,0) 70%),
+    #f3f1fb;
+}
+
+/* Accent position helpers — use with any theme */
+.mockup-card.accent-tl { --accent-x: 20%; --accent-y: 20%; }
+.mockup-card.accent-tr { --accent-x: 80%; --accent-y: 20%; }
+.mockup-card.accent-bl { --accent-x: 20%; --accent-y: 85%; }
+.mockup-card.accent-br { --accent-x: 80%; --accent-y: 85%; } /* default-ish */
+.mockup-card.accent-center { --accent-x: 50%; --accent-y: 55%; }
+
+/* Optional size helpers */
+.mockup-card.accent-small  { --accent-w: 720px;  --accent-h: 380px; }
+.mockup-card.accent-large  { --accent-w: 1200px; --accent-h: 640px; }
+
+
+
+.mockup-inner {
+  display: grid;
+  gap: clamp(16px, 3.5vw, 40px);
+  align-items: center;
+  padding: var(--card-pad);
+  min-height: 320px;
+
+  /* NEW: center the whole cluster & cap its width */
+  justify-content: center;
+  max-width: 1100px;         /* tweak to taste */
+  margin-inline: auto;
+
+  /* NEW: content-sized columns, not 1fr that fills the card */
+  grid-template-columns: auto min(46ch, 36vw);
+}
+/* Tell the container the phone’s aspect ratio (use your PNG’s real size!) */
+/* PHONE — robust, won’t collapse */
+/* add a tiny uniform pad to shrink the video */
+/* ===== Phone with PNG 874×1804 ===== */
+.phone{
+  /* PNG size (unitless for aspect-ratio) */
+  --W: 874; 
+  --H: 1804;
+
+  /* screen-hole margins in the PNG (px) — tweak these 5 values */
+  --L: 10;          /* left  */
+  --R: 10;          /* right */
+  --T: 20;          /* top   */
+  --B: 20;          /* bottom */
+  --RADIUS: 150;     /* corner radius of the hole (px) */
+
+  /* optional tiny zoom if corners kiss the bezel */
+  --zoom: 0.99;     /* 1 = no change; 0.99 = shrink 1% */
+
+  position: relative;
+  width: min(280px, 42vw);
+  aspect-ratio: var(--W) / var(--H);
+}
+
+/* The rounded screen mask (black background), clips the video */
+.phone .screen{
+  position: absolute;
+  inset:
+    calc(var(--T) / var(--H) * 100%)
+    calc(var(--R) / var(--W) * 100%)
+    calc(var(--B) / var(--H) * 100%)
+    calc(var(--L) / var(--W) * 100%);
+  border-radius:
+    calc(var(--RADIUS) / var(--W) * 100%)
+    / calc(var(--RADIUS) / var(--H) * 100%);
+  overflow: hidden;
+  background: #000;         /* looks like a real screen if video is smaller */
+  z-index: 1;
+}
+
+/* The video fills the mask; change to contain if you want no crop */
+.phone .screen > video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* or: contain */
+  object-position: 50% 50%;
+  transform: scale(var(--zoom));
+  transform-origin: center;
+  display: block;
+}
+
+/* Frame PNG on top */
+.phone-frame{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+/* ===== Copy ===== */
+.mockup-copy h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(24px, 3.4vw, 40px);           /* slightly smaller */
+  font-style: regular;
+  margin: 0 0 6px;
+  color: #17314e;
+  font-weight: 300;
+}
+
+.mockup-copy p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  color: #2f3a45;
+  max-width: 40ch;
+}
+
+.mockup-cta {
+  appearance: none;
+  border: 0;
+  padding: 10px 16px;                             /* smaller button */
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 2px 0 rgba(0,0,0,.1), inset 0 0 0 1px #e5e7eb;
+  font: 500 14px/1 "Space Grotesk", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .mockup-card { margin: 32px 16px; }
+  .mockup-inner {
+    justify-items: center; 
+    grid-template-columns: 1fr;
+    text-align: center;
+    min-height: 340px;                            /* extra-short on mobile */
+  }
+  .mockup-copy { place-self: center; }
 }
 

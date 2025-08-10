@@ -697,11 +697,8 @@ html, body {
 }
 
 .section-divider {
-    width: 90vw; /* Set the width to the full width of the viewport */
-    position: relative; /* Switch to relative positioning */
-    left: 50%; /* Move the divider to the center */
-    right: 50%;
-    transform: translateX(-50%); /* Offset the divider back to the left by half its width */
+    width: calc(100% - 240px); /* Match content width (100% - 120px padding on each side) */
+    margin-left: 120px; /* Match the left padding of main content */
     height: 1px;
     background-color: #454545;
     margin-top: 50px; /* Space above the line */

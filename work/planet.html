@@ -23,9 +23,9 @@
     <!-- Hero Section -->
     <div class="hero-title-section">
         <h1 class="hero-title">Planet</h1>
+        <h4>Mobile app for sharing moods to support mental well-being and social connectivity</h4>
         <img src="/elements/arrow.svg" class="scroll-arrow" alt="Scroll Down Arrow">
     </div>
-    
     <div class="scroller" data-speed="slow" data-direction="left">
         <div class="scroller__inner">
           <img src="/elements/projectimages/pc1.jpeg" alt="Project Image 1" />
@@ -72,17 +72,62 @@
             where building connections feels intuitive and supportive.
         </p>
 
-        <div class="video-container">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/j_qaeIyMq_U" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <!-- Mockup Card -->
+    <section class="mockup-card">
+        <div class="mockup-inner">
+        <!-- Phone + video -->
+        <figure class="phone">
+            <div class="screen">
+            <video autoplay loop muted playsinline>
+                <source src="./assets/task1.mp4" type="video/mp4" />
+            </video>
+            </div>
+            <img class="phone-frame" src="./assets/phonemockup.png" alt="">
+        </figure>
+        <!-- Right-hand text -->
+        <div class="mockup-copy">
+            <h2>Update Your Emotional Status</h2>
+            <p>Share how you’re feeling through photos and emotes to keep friends in the loop.</p>
         </div>
+        </div>
+    </section>
+    <section class="mockup-card sage accent-bl">
+        <div class="mockup-inner">
+        <!-- Phone + video -->
+        <figure class="phone">
+            <div class="screen">
+            <video autoplay loop muted playsinline>
+                <source src="./assets/task2.mp4" type="video/mp4" />
+            </video>
+            </div>
+            <img class="phone-frame" src="./assets/phonemockup.png" alt="">
+        </figure>
+        <!-- Right-hand text -->
+        <div class="mockup-copy">
+            <h2>Schedule a Hangout with Friends</h2>
+            <p>Find the perfect time to connect without the scheduling hassle.</p>
+        </div>
+        </div>
+    </section>
+    <section class="mockup-card purple accent-tr">
+        <div class="mockup-inner">
+        <!-- Phone + video -->
+        <figure class="phone">
+            <div class="screen">
+            <video autoplay loop muted playsinline>
+                <source src="./assets/task3.mp4" type="video/mp4" />
+            </video>
+            </div>
+            <img class="phone-frame" src="./assets/phonemockup.png" alt="">
+        </figure>
+        <!-- Right-hand text -->
+        <div class="mockup-copy">
+            <h2>Organize Friends into Galaxies</h2>
+            <p>Group your circles to keep close connections within easy reach.</p>
+        </div>
+        </div>
+    </section>
+
     </section>
 
     <!-- Website Section -->
@@ -106,7 +151,8 @@
     <section class="main-content fade-in">
         <h1>Needfinding</h1>
         <p>
-            To understand the mental health challenges faced by university students, we conducted a needfinding process focused on shared stressors like academics, extracurriculars, and work-life balance. Through four initial in-depth interviews with diverse participants, we explored coping mechanisms, social support, and mental health resources. Using empathy maps, we distilled key themes such as the value of <b>social connections</b>, <b>reluctance to use resources</b>, and <b>stress from overwhelming workloads</b>. These insights guided our project to address pressing student needs effectively.        </p>
+            To understand the mental health challenges faced by university students, we conducted four in-depth interviews focused on stressors like academics, extracurriculars, and work-life balance. While we initially planned to address burnout and motivation in relation to our studio theme of Technology for Mental Health, we found that concerns regarding maintaining friendships and relationships were the most recurring themes. Thus, designing for emotional transparency and inclusivity shaped Planet’s core features and values.
+     </p>
         </p>
         <div class="grid-image">
             <img src="/elements/projectimages/A1-1.png" alt="Gallery Image 1">
@@ -123,15 +169,16 @@
             After completing the needfinding process, we transitioned to defining actionable problem statements through the creation of Points of View (POVs). By synthesizing the insights gathered from our interviews and empathy maps, we articulated POVs that captured the needs and challenges of our users, ensuring our problem space was well-defined. This process allowed us to reframe our design challenge into clear, meaningful statements, setting the stage for ideation. Below are our top 3 POVs. 
         </p>
 
-        <div class="pov-statement fade-in">
-            <img src="/elements/projectimages/sophia.png" alt="Sophia" class="pov-avatar">
-            <div class="pov-text">
-                <p><b>We met…</b><br>Sofia, a junior majoring in political science at Stanford University who occasionally struggles with planning academics and social events.</p>
-                <p><b>We were surprised to notice...</b><br>She feels guilt and the need to punish herself for prioritizing social life over academics.</p>
-                <p><b>We wonder if this means...</b><br>She feels like she should choose between her social life and academics.</p>
-                <p><b>It would be game changing...</b><br>If she could eliminate the guilt she feels after a social hangout.</p>
+        <div class="pov-container">
+            <div class="pov-statement fade-in">
+                <img src="/elements/projectimages/sophia.png" alt="Sophia" class="pov-avatar">
+                <div class="pov-text">
+                    <p><b>We met…</b><br>Sofia, a junior majoring in political science at Stanford University who occasionally struggles with planning academics and social events.</p>
+                    <p><b>We were surprised to notice...</b><br>She feels guilt and the need to punish herself for prioritizing social life over academics.</p>
+                    <p><b>We wonder if this means...</b><br>She feels like she should choose between her social life and academics.</p>
+                    <p><b>It would be game changing...</b><br>If she could eliminate the guilt she feels after a social hangout.</p>
+                </div>
             </div>
-        </div>
         <div class="pov-statement fade-in">
             <img src="/elements/projectimages/daniel.png" alt="Daniel" class="pov-avatar">
             <div class="pov-text">
@@ -150,18 +197,56 @@
                 <p><b>It would be game changing...</b><br>To enable students to make more friends while maintaining good connections with their existing friends.</p>
             </div>
         </div>
+        </div>
     </section>
 
     <section class="main-content">
         <h1>HMW Statements</h1>
-        <p>For each POV, we brainstormed 10 "How Might We" (HMW) statements to explore innovative solutions. As a team, we reviewed all the HMWs and voted on the top three overall, prioritizing those that resonated deeply with our interviews and addressed key insights about mental health. These top-voted HMWs guided our ideation phase, ensuring a focused and empathetic approach to addressing user challenges.
+        <p>For each POV, we generated 10 "How Might We" (HMW) statements to spark creative, solution-oriented thinking. Using heatmap voting, our team evaluated all ideas and highlighted the ones that resonated most with user stories from our interviews—especially around mental health challenges.
         </p>
-        <img class="single-image" src="/elements/projectimages/HMW.png" alt="Descriptive Text">
+        <div class="hmw-container">
+            <div class="hmw-embed">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/board/ME8Y3cB4FAbdqdkXHDXFdM/CS147-POV--HMW--and-Brainstorming?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+            </div>
+            <div class="hmw-list">
+                <h3>Top 3 HMW Statements:</h3>
+                <ol>
+                    <li>HMW make social hangouts feel productive?</li>
+                    <li>HMW make scheduling feel less confrontational?</li>
+                    <li>HMW turn weak ties (from classes) into strong ties?</li>
+                </ol>
+            </div>
+        </div>
+        
 
     </section>
-    <!-- Design Report Section -->
-    <div id="project-nav-placeholder"></div>
 
+    <!-- <section class="main-content fade-in">
+        <h1>Low-Fidelity Prototyping</h1>
+        <p>
+            Moving from sketches to paper prototypes, we tested our three core tasks: setting an emotional status, 
+            scheduling a hangout, and organizing friends into "galaxies." Users loved the galaxy grouping and Google Calendar 
+            integration but found some icons unclear and dropdowns clunky. Feedback from this stage informed major navigation 
+            and workflow improvements.
+        </p>
+        <div class="grid-image">
+            <img src="/elements/projectimages/lowfi1.png" alt="Low-Fi Prototype Image 1">
+            <img src="/elements/projectimages/lowfi2.png" alt="Low-Fi Prototype Image 2">
+        </div>
+    </section>
+    
+    <section class="main-content fade-in">
+        <h1>Medium-Fidelity Prototyping</h1>
+        <p>
+            In our Figma prototype, we introduced a cohesive purple palette, refined iconography, and embraced our planet branding 
+            to make the interface more intuitive and inviting. Testing with peers surfaced 42 heuristic violations, leading to 
+            fixes such as adding labels under planets, standardizing sizes, and redesigning the calendar for clarity.
+        </p>
+        <div class="grid-image">
+            <img src="/elements/projectimages/medfi1.png" alt="Med-Fi Prototype Image 1">
+            <img src="/elements/projectimages/medfi2.png" alt="Med-Fi Prototype Image 2">
+        </div>
+    </section> -->
 
     <!-- Footer -->
     <footer class="footer-section">
