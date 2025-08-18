@@ -72,12 +72,10 @@ p {
     align-items: center;
     min-height: 100vh; 
     width: 100vw;
-    background-image:
-      url("elements/texture.png"), url("elements/gradient.png");
+    background-image:url("elements/background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-blend-mode: overlay;
 }
 
 .play-main {
@@ -86,12 +84,10 @@ p {
     align-items: center;
     min-height: 100vh; 
     width: 100vw;
-    background-image:
-      url("elements/texture.png"), url("elements/gradient2.png");
+    background-image:url("elements/play-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-blend-mode: overlay;
 }
 
 .text-container {
