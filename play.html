@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preload" href="elements/play-background.svg" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design - Carolyn Lee</title>
@@ -12,9 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="preload" href="elements/gradient.png" as="image">
-    <link rel="preload" href="elements/texture.png" as="image">
-    <link rel="preload" href="elements/gradient2.png" as="image">
+
+    <style>
+        .main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh; 
+          width: 100vw;
+          background-image: url("elements/play-background.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
 </head>
 
 <body>
