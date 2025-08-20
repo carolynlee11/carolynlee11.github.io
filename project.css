@@ -896,3 +896,39 @@ body {
     margin-top: 0px;
   }
 }
+
+.nda-card {
+  border-radius: 20px;
+  padding: 32px;
+  background: #f9f9fb;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 70%;
+  margin: 40px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nda-card .nda-lock {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.nda-card h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: #2f3a45;
+}
+
+.nda-card p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+.nda-card a {
+  color: #17314e;
+  text-decoration: underline;
+  font-weight: 500;
+}
