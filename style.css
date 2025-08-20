@@ -668,47 +668,84 @@ html, body {
     }
 }
 
+/* Layout */
 .section-divider {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* space between text and lines */
+    gap: 20px;
     width: calc(100% - 240px);
     margin: 50px auto 0;
     max-width: 70%;
+  }
+  
+  /* Default state: hidden, no animation */
+  .animate-divider .divider-text,
+  .animate-divider .divider-line {
+    opacity: 0;
+    transform: scaleX(0);
+    animation: none;            /* IMPORTANT: cancel any base animation */
   }
   
   .divider-line {
     flex: 1;
     height: 1px;
     background-color: #454545;
+    will-change: transform;
   }
   
-  .divider-text {
-    white-space: nowrap; /* keep symbols together */
-    font-size: 1rem; /* adjust size if needed */
-    color: #454545;
+  /* Active state: animate on scroll-in */
+  .animate-divider.active .divider-text {
+    animation: starsFade 500ms ease forwards;
   }
-
+  
+  .animate-divider.active .divider-line:first-of-type {
+    transform-origin: right center;
+    animation: lineGrow 700ms ease forwards 400ms;
+  }
+  
+  .animate-divider.active .divider-line:last-of-type {
+    transform-origin: left center;
+    animation: lineGrow 700ms ease forwards 400ms;
+  }
+  
+  /* Keyframes */
+  @keyframes starsFade {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes lineGrow {
+    0%   { transform: scaleX(0); opacity: 0; }
+    15%  { opacity: 1; }
+    100% { transform: scaleX(1); opacity: 1; }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-divider .divider-text,
+    .animate-divider .divider-line {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  /* Responsive tweaks */
   @media (max-width: 1024px) {
     .section-divider {
-      width: calc(100% - 80px); /* less side spacing */
+      width: calc(100% - 80px);
       max-width: 90%;
       gap: 12px;
     }
   }
-  
-  /* Mobile */
   @media (max-width: 600px) {
     .section-divider {
-      width: calc(100% - 40px); /* match mobile text/image padding */
+      width: calc(100% - 40px);
       max-width: 80%;
       gap: 8px;
     }
-  
-    .divider-text {
-      font-size: 0.9rem; /* slightly smaller text */
-    }
+    .divider-text { font-size: 0.9rem; }
   }
   
 

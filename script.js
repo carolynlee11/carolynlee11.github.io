@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  
   const fadeSections = document.querySelectorAll(
     ".project-details, .main-content, .pov-statement, .single-image, .poster-images, .about-container, .project-section, .header-sub"
 );
@@ -244,3 +245,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// Animate section-divider on scroll
+const dividers = document.querySelectorAll(".animate-divider");
+
+const dividerObserver = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");  // triggers CSS animations
+        obs.unobserve(entry.target);           // play once
+      }
+    });
+  },
+  { threshold: 0.2 } // adjust if you want it to start earlier/later
+);
+
+dividers.forEach(d => dividerObserver.observe(d));
