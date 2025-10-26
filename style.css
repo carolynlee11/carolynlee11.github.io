@@ -88,9 +88,13 @@ p {
 .main h2 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
-    font-size: 20px; /* Reduced from 24px */
+    font-size: 22px; /* Reduced from 24px */
     color: #454545;
     margin: 0;
+}
+
+.main h2 strong {
+  font-weight: 700; /* try 600, 700, or 800 */
 }
 
 .main .chinese {
