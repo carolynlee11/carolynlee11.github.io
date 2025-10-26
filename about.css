@@ -1,9 +1,12 @@
 /* Instrument Serif Font */
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+body {
+  background-color: #FFFEFB;
+}
 
 /* General About Page Styling */
 .about-section {
-    max-width: 1000px;
+    max-width: 80%;
     margin: auto;
     padding: 20px 20px;
     padding-top: 150px;
@@ -21,7 +24,7 @@
 /* Alternating Layout */
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     margin-bottom: 80px;
 }
@@ -63,7 +66,7 @@
 
 /* Image Styling */
 .about-image {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +75,7 @@
 .rounded-image {
     width: 100%;
     max-width: 400px;
+    border-radius: 15px;
 }
 
 .art-image {
@@ -134,4 +138,70 @@
 .fade-in-visible {
     animation: fadeUp 0.8s ease-in-out forwards;
     opacity: 1; /* Ensure visibility */
+}
+
+/* --- Work / Leadership Section --- */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.work-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.work-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f8f8f8;
+  border: 1px solid #eaeaea;
+}
+
+.work-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #2f3a45;
+}
+
+.work-info p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 2px 0 0;
+  color: #454545;
+}
+
+.work-info span {
+  color: #888;
+}
+
+.about-list {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  color: #454545;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.about-list li {
+  margin-bottom: 6px;
 }
