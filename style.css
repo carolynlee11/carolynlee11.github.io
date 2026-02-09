@@ -80,7 +80,7 @@ p {
 .main h1 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600; /* If you want it bold */
-    font-size: 48px; /* Or any other size */
+    font-size: 42px; /* Or any other size */
     color: #454545; /* Replace with the color you want */
     margin: 0; /* Reset default margin */
 }
@@ -88,7 +88,7 @@ p {
 .main h2 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
-    font-size: 22px; /* Reduced from 24px */
+    font-size: 20px; /* Reduced from 24px */
     color: #454545;
     margin: 0;
 }
@@ -100,7 +100,7 @@ p {
 .main .chinese {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 400;
-    font-size: 46px; /* Or any other size */
+    font-size: 42px; /* Or any other size */
     color: #454545;
     margin: 0;
 }
@@ -108,7 +108,7 @@ p {
 .main .pinyin {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600;
-    font-size: 24px; /* Or any other size */
+    font-size: 22px; /* Or any other size */
     color: #454545;
     margin: 0;
 }
@@ -187,7 +187,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 22px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -210,7 +210,7 @@ p {
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -450,8 +450,8 @@ html, body {
 .star-icon {
     vertical-align: text-bottom; /* This aligns the star with the middle of the line of text */
     margin-right: -10px; /* Adjust spacing between the star and the text */
-    width: 55px; /* Adjust size as needed */
-    height: 55px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
 }
 
 .star-logo {
@@ -807,7 +807,7 @@ html, body {
 .work-section h2 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600;
-    font-size: 48px; /* Set the font size for the heading */
+    font-size: 42px; /* Set the font size for the heading */
     color: #454545; /* Set the color */
     margin-bottom: 20px; /* Space below the heading */
     text-align: left; /* Center the heading */
