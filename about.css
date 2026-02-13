@@ -1,207 +1,260 @@
-/* Instrument Serif Font */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-body {
-  background-color: #FFFEFB;
+:root{
+  --bg: #FFFEFB;
+  --text: #454545;
+  --muted: rgba(69,69,69,0.65);
+  --border: rgba(69,69,69,0.12);
+  --quote-line: #b7d6e6;
 }
 
-/* General About Page Styling */
-.about-section {
-    max-width: 80%;
-    margin: auto;
-    padding: 20px 20px;
-    padding-top: 150px;
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-.about-header {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 32px;
-    text-transform: lowercase;
-    color: #454545;
-    text-align: left;
-    margin-bottom: 40px;
+.about-page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px 40px;
 }
 
-/* Alternating Layout */
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 80px;
+/* ===== HERO (2/3 text, 1/3 image) ===== */
+.about-hero{
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* <- text ~2/3, image ~1/3 */
+  gap: 56px;
+  align-items: start;
 }
 
-.reverse {
-    flex-direction: row-reverse;
+.eyebrow{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
 }
 
-/* Text Styling */
-.about-text {
-    width: 50%;
+.about-title{
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.05;
+  margin: 0 0 14px;
 }
 
-.about-text h2 {
-    font-family: 'Instrument Serif', serif;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 300;
-    color: #454545;
-    margin-bottom: 5px;
-    
+/* Quote inline under title */
+.quote-inline{
+  position: relative;
+  margin: 0 0 18px;
+  padding-left: 18px;
 }
 
-.about-text h1 {
-    font-family: 'Instrument Serif', serif;
-    font-size: 48px;
-    font-style: italic;
-    font-weight: 300;
-    color: #454545;
-    margin-bottom: 20px;
+.quote-line{
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--quote-line);
 }
 
-.about-text p {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #454545;
+.quote-text{
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+color: var(--muted);
+
 }
 
-/* Image Styling */
-.about-image {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.quote-author{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.rounded-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
+/* Intro paragraph (body text 16px) */
+.about-intro{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text);
+  margin: 0 0 18px;
+  max-width: 70ch;
 }
 
-.art-image {
-    width: 100%;
-    max-width: 500px;
-}
-
-.cafe-image {
-    width: 100%;
-    max-width: 300px;
-}
-
-
-
-/* Skills Icons */
-.skills-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.skills-icons img {
-    width: 40px;
-    height: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .reverse {
-        flex-direction: column;
-    }
-
-    .about-text, .about-image {
-        width: 100%;
-    }
-}
-
-@keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Start slightly below */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in-visible {
-    animation: fadeUp 0.8s ease-in-out forwards;
-    opacity: 1; /* Ensure visibility */
-}
-
-/* --- Work / Leadership Section --- */
-.work-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.work-item {
+/* Links */
+.about-links{
   display: flex;
   align-items: center;
-  gap: 16px;
-  background: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 14px;
-  padding: 14px 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.work-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
-
-.work-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #f8f8f8;
-  border: 1px solid #eaeaea;
-}
-
-.work-info h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  color: #2f3a45;
-}
-
-.work-info p {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  margin: 2px 0 0;
-  color: #454545;
-}
-
-.work-info span {
-  color: #888;
-}
-
-.about-list {
+  gap: 10px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 16px;
-  color: #454545;
   font-weight: 300;
-  padding-left: 10px;
+  font-size: 16px;
 }
 
-.about-list li {
-  margin-bottom: 6px;
+.text-link{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(69,69,69,0.25);
+  padding-bottom: 2px;
+}
+.text-link:hover{
+  border-bottom-color: rgba(69,69,69,0.6);
+}
+
+.dot{
+  color: rgba(69,69,69,0.35);
+}
+
+/* Smaller image */
+.hero-photo{
+  width: 100%;
+  max-width: 320px;       /* <- keeps it from feeling huge */
+  margin-left: auto;      /* right align */
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+/* ===== EXPERIENCE + LEADERSHIP two columns ===== */
+.two-col{
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.section-heading{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+/* List rows */
+.exp-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(69,69,69,0.10);
+}
+
+.exp-row:last-child{
+  border-bottom: none;
+}
+
+.exp-left{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.exp-company{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.exp-slash{
+  color: rgba(69,69,69,0.35);
+}
+
+.exp-role{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--muted);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exp-year{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(69,69,69,0.45);
+  white-space: nowrap;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+  margin-top: 62px;
+}
+
+.section-title{
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gallery-img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+  .about-page{
+    padding: 110px 20px 40px;
+  }
+
+  .about-hero{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-title{
+    font-size: 44px;
+  }
+
+  .hero-photo{
+    max-width: 360px;
+    margin-left: 0;
+  }
+
+  .two-col{
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img{
+    height: 240px;
+  }
 }
